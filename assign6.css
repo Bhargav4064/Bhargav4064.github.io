@@ -1,1 +1,256 @@
-This is CSS!
+/* Author: I Bhargav Patel, 000882786 certify that this material is my original work. No other person's work has been used without due acknowledgement. I have not made my work available to anyone else. */
+
+/* Reset default styles for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+}
+/* Set body background color*/
+body { 
+    background-color: rgb(43, 43, 43); 
+}
+
+/* Naviagtion bar CSS starts from here*/
+#navbar {
+    position: fixed;
+    top: 8px;
+    width: 86%;
+    border: grey 3px solid;
+    border-radius: 18px;
+    padding: 7px;
+    margin-left: 7%;
+    margin-right: 7%;
+    display: flex;
+    justify-content: space-around;
+    -webkit-backdrop-filter: blur(8px); /* Apply backdrop filter for blur effect */
+    backdrop-filter: blur(8px);
+    z-index: 1000; /* set z index to ensure it appears above other content*/
+}
+#navbar a {
+    color: #ffc;
+    font-size: 23px;
+    text-decoration: none;
+    transform: 1s all ease;
+    padding: 5px 10px;
+    transition: 0.2s all ease;
+    border-radius: 12px;
+}
+#navbar a:hover {
+    color: rgb(56, 49, 49);
+    background-color: #ffc;   
+}
+/* Naviagation CSS ends here */
+
+/* set text color for my name and position */
+#textColor { 
+    color: #ffc; 
+}
+h1 { 
+    float: left; 
+}
+#Home { 
+    padding: 45px; 
+    padding-top: 60px;
+}
+
+/* Pseudo element style for smooth scrolling */
+:target::before {
+    content: "";
+    display: block;
+    height: 95px;
+    margin-top: -95px; 
+    visibility: hidden;
+}
+.container {
+    padding-top: 50px; 
+    position: relative;
+}
+.summary { 
+    font-size: 22px; 
+}
+img {
+    width: 400px;
+    height: 350px;
+    border-radius: 15px;
+    position: relative;
+}
+.myimage {
+    border-radius: 50%;
+    margin-left: 20px;
+
+}
+
+/* Education css starts from here with the box style*/
+.box {
+    display: flex;
+    align-items: center;
+    padding: 34px;
+    border-radius: 17px;
+    box-shadow: 0 11px 22px rgba(0, 0, 0, 0.30);
+    transition: all 0.4s ease;
+}
+.box:hover {
+    transform: scale(1.04);
+    background-color: rgb(102, 102, 102);
+}
+.image {
+    width: 250px;
+    height: 150px;
+    border-radius: 60%;
+    margin-right: 40px;
+}
+.image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease; /* Adding transition for smooth effect */
+    transform-origin: center; /* Setting transform origin to center */
+}
+.box:hover.image img { transform: scale(1.2); }
+.content { flex: 1; }
+.content h3 {
+    font-size: 33px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.content p {
+    font-size: 23px;
+    margin-bottom: 10px;
+}
+.content h4 {
+    font-size: 20px;
+    font-weight: 600;
+    color: rgb(136, 136, 136);
+}
+
+#Education h1, #Skill h1, #Project h1, #Contact h1 { color: hotpink !important; }
+#Education:target, #Skill:target, #Project:target, #Contact:target { padding-top: 35px; }
+/* Education section ends here*/
+
+/* Skill content dropdown stryles starts from here*/
+.skill-content {
+    display: none;
+    padding: 10px;
+    border: 1px solid rgba(76, 72, 72, 0.373);
+    border-radius: 5px;
+    background-color: rgba(68, 148, 88, 0.718);
+    margin-bottom: 30px;
+}
+.skill-content.show {
+    display: block;
+    margin-top: 10px;
+    margin-right: 5.8%;
+}
+.skillSpace {
+    margin-top: 85px;
+    margin-bottom: 10px;
+}
+.skillImage {
+    width: 400px;
+    height: 310px;
+    margin-right: 20px;
+    border-radius: 30px;
+    margin-top: 78px;
+
+}
+.skill-heading {
+    cursor: pointer;
+    transition: color 0.3s;
+    margin-bottom: 40px;
+    padding: 3px;
+    background-color: #333;
+}
+.skill-heading:hover { color: rgba(88, 219, 202, 0.674); }
+.card {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); 
+    background-color:#333; 
+    color: #ecf0f1; 
+    border-radius: 10px; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+.skill-heading::after {
+    content: '▼'; /* symbol to show down arrow */
+    display: inline-block;
+    margin-left: 450px; /* Adjust the spacing between the text and the arrow */
+}
+#msArrow::after {
+    margin-left: 482px;
+}
+#problemArrow::after {
+    margin-left: 556px;
+}
+#techArrow::after {
+    margin-left: 496px;
+}
+/* Skill section CSS ends here */
+
+/* Project css starts from here with the card styles*/
+.card:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 8px 16px rgba(184, 180, 180, 0.751);
+}
+.card-title {
+    font-size: 24px; 
+    margin-bottom: 10px; 
+    color: aqua;
+}
+.card-body ul li {
+    color: rgba(220, 255, 47, 0.647);
+}
+.card-subtitle {
+    font-size: 16px;
+    color: #c55aaa9d;
+}
+.card-body p {
+    font-size: 18px;
+    color: burlywood;
+}
+/* Project css ends here*/
+
+/* CSS for contact starts from here*/
+#Contact h1 { 
+    margin-bottom: -30px; 
+}
+#Contact p.text-center { 
+    margin-bottom: 10px; 
+    color: rgb(70, 150, 220);
+}
+#Contact input[type="text"], #Contact input[type="email"], #Contact textarea { 
+    background-color: #ffffff; /* Contact form input styles */
+}
+#Contact .btn-primary { 
+    margin-left: 25%; 
+}
+#Contact .btn-primary:first-of-type { 
+    background-color: #538d58; 
+    border-color: #888;
+}
+#Contact .btn-primary:last-of-type { 
+    background-color: #863333da; 
+    border-color: #888;
+}
+/* contact css ends here*/
+
+/* Footer css starts from here */
+footer{
+    border-top: 1px solid rgb(255, 255, 204);
+    margin-top: 150px;
+}
+.fontsize {
+    font-size: 30px;
+}
+.fontformail {
+    font-size: 20px;
+}
+#logoheight {
+    height: 65px;
+}
+footer .content .logo {
+    width: 65px;
+    height: 50px;
+    position: static;
+    display: inline-block;
+}
+/* Footer CSS ends here*/
